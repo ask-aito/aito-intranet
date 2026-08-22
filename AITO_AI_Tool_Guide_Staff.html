@@ -1,3 +1,15 @@
+<!--
+  CHANGELOG — v1.4, reassessed 22 August 2026 (matches internal Governance Assessment v1.4)
+  - Otter.ai: updated wording — a federal court ruled Aug 13 2026 (previously pending).
+  - Claude (for Work/Enterprise): added plain-English note on Anthropic's Aug 2026 safety
+    disclosures — no change to Conditional status.
+-->
+<!--
+  CHANGELOG — v1.3, reassessed 10 August 2026 (matches internal Governance Assessment v1.3)
+  - Salesforce Einstein / Agentforce: new alert card added (Conditional — check with AITO).
+  - Notes.ai: new card added (Prohibited — Do Not Use).
+  - Otter.ai and other Do Not Use tools: no change in staff-facing guidance.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,7 +134,7 @@
   <h1>AI Tool Guide: What You Can and Cannot Use</h1>
   <p class="cover-sub">A plain-English reference for all TRCAS staff and volunteers on which AI tools are approved for work, which require care, and which must never be used — and what information should never be shared with any AI tool.</p>
   <div class="cover-meta">
-    <span>July 2026 · Version 1.2</span>
+    <span>22 August 2026 · Version 1.4</span>
     <span>Issued by Archdiocesan IT Office (AITO)</span>
     <span>For all TRCAS staff, clergy &amp; volunteers · All prices shown in USD</span>
   </div>
@@ -257,6 +269,7 @@
     <button class="filter-btn" onclick="filterCards('meeting',this)">Meeting AI</button>
     <button class="filter-btn" onclick="filterCards('creative',this)">Creative &amp; Writing</button>
     <button class="filter-btn" onclick="filterCards('coding',this)">Coding AI</button>
+    <button class="filter-btn" onclick="filterCards('workflow',this)">⚠️ Action Required</button>
     <button class="filter-btn" onclick="filterCards('agent',this)">AI Agents</button>
   </div>
 
@@ -432,10 +445,26 @@
         <div class="tool-cat">Otter.ai · Basic free / Pro $8.33/month / Business $19.99/month — Do not use at any tier</div>
       </div>
       <div class="tool-card-body">
-        <p>Otter.ai uses de-identified meeting audio to train its AI models by default across all tiers. There is also an ongoing federal lawsuit (filed 2025) alleging unauthorised recording and AI training. Do not use for any Archdiocesan meetings.</p>
+        <p>Otter.ai uses de-identified meeting audio to train its AI models by default across all tiers. A US federal court ruled in August 2026 that Otter acts as an unauthorised third party that records and uses conversations for its own benefit — the lawsuit is continuing. Do not use for any Archdiocesan meetings.</p>
         <ul style="margin-top:8px;">
           <li>❌ Do not use at any tier for any work meetings</li>
           <li>❌ A paid Business subscription does not make it safe — training applies at all tiers</li>
+          <li>✅ Use Zoom AI Companion or Fathom instead</li>
+        </ul>
+      </div>
+      <div class="tool-card-footer"><span class="badge prohibited">Do Not Use</span></div>
+    </div>
+
+    <div class="tool-card" data-verdict="prohibited" data-cat="meeting">
+      <div class="tool-card-header">
+        <div class="tool-name">Notes.ai</div>
+        <div class="tool-cat">Independent developer app · Mac only — Do not use</div>
+      </div>
+      <div class="tool-card-body">
+        <p>This is a small app built by a single independent developer, not a company. It advertises itself as private, but there is no organisation behind it to sign a data protection agreement with, no security certification, and your meeting notes get exported into your own personal Notion account — outside AITO's oversight.</p>
+        <ul style="margin-top:8px;">
+          <li>❌ Do not use for any work meetings, even though it markets itself as privacy-focused</li>
+          <li>❌ Especially avoid for pastoral, HR, or donor conversations</li>
           <li>✅ Use Zoom AI Companion or Fathom instead</li>
         </ul>
       </div>
@@ -466,6 +495,7 @@
           <li>✅ Document review and editing</li>
           <li>✅ "Claude Cowork" (if enabled by AITO): can carry out multi-step tasks like Copilot Cowork above — same rule applies, never near sacramental, pastoral, donor, or HR data</li>
           <li>⚠️ Only use if AITO has set up an organisational account — do not use your personal Claude account for work</li>
+          <li>⚠️ Anthropic (Claude's maker) publicly disclosed some real safety incidents in its own testing during July/August 2026 — this hasn't changed our approval, but it's why Claude Cowork should always be scoped carefully and never given access to sensitive systems</li>
           <li>❌ Do not use Claude Free, Pro, or Max for any Archdiocesan work</li>
           <li>❌ Do not share sensitive personal data (see Section 2)</li>
         </ul>
@@ -734,6 +764,23 @@
       <div class="tool-card-footer"><span class="badge conditional">If applicable — Contact AITO</span></div>
     </div>
 
+    <div class="tool-card" data-verdict="conditional" data-cat="workspace">
+      <div class="tool-card-header">
+        <div class="tool-name">Salesforce Einstein / Agentforce</div>
+        <div class="tool-cat">Salesforce · Bundled with some Salesforce editions — check with AITO</div>
+      </div>
+      <div class="tool-card-body">
+        <p>AITO is not aware of TRCAS using Salesforce centrally, but some non-parish sub-organisations may already use it, and its AI features (Einstein/Agentforce) may hold donor or beneficiary information. If your organisation uses Salesforce, this applies to you.</p>
+        <ul style="margin-top:8px;">
+          <li>⚠️ If you use Salesforce, contact AITO before using its AI features with any donor or beneficiary data</li>
+          <li>⚠️ Admin action needed: an admin must manually turn OFF "Opt Out of Customer Data Access" in Salesforce Setup — it is ON by default and lets Salesforce use your org's data for its own AI training</li>
+          <li>⚠️ Confirm with AITO whether Singapore data residency has actually been switched on for your org — it is available but not automatic</li>
+          <li>✅ Once these steps are confirmed, Salesforce AI features may be used conditionally — never for donor financial data, HR data, or other AITO-restricted data types without written AITO sign-off</li>
+        </ul>
+      </div>
+      <div class="tool-card-footer"><span class="badge conditional">Conditional — Check With AITO</span></div>
+    </div>
+
   </div>
 
 
@@ -943,7 +990,7 @@
 
 <div class="disclaimer">
   <strong style="color:var(--navy);display:block;margin-bottom:5px;">Disclaimer</strong>
-  This guide is issued by the Archdiocesan IT Office (AITO) for TRCAS staff, clergy, and volunteers. Tool assessments are based on publicly available vendor documentation as of July 2026. Vendor policies change — AITO will update this guide periodically. This document does not constitute legal advice. When in doubt about a specific situation, contact AITO before proceeding. Classification: Internal — For TRCAS Staff and Volunteers.
+  This guide is issued by the Archdiocesan IT Office (AITO) for TRCAS staff, clergy, and volunteers. Tool assessments are based on publicly available vendor documentation as of 22 August 2026. Vendor policies change — AITO will update this guide periodically. This document does not constitute legal advice. When in doubt about a specific situation, contact AITO before proceeding. Classification: Internal — For TRCAS Staff and Volunteers.
 </div>
 
 <script>
