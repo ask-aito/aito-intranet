@@ -1,4 +1,16 @@
 <!--
+  CHANGELOG — v1.5, updated September 2026
+  - Section 2: Added "Crisis & Conflict Matters" row to the absolute prohibition table.
+  - Section 2: Added "AI-Generated Imagery" note on general imagery rules.
+  - Section 3: Added Plaud Note Pro (Conditional) to Meeting AI category.
+  - Section 3: Added DaVinci Resolve / Resolve Studio (Approved) to Creative AI category.
+  - Section 4: Added Step 9 — Keep agentic features off.
+  - Section 4: Added Step 10 — Only use AITO-approved tools to record or transcribe meetings (covers both apps and hardware recording devices).
+  - Section 4: Added AI-enabled fraud and voice-cloning alert box.
+  - Section 6: Added Key Terms section with definitions for LLM, Agentic AI, Agent-to-agent,
+    MCP, Public AI tool, and Approved AI tool.
+-->
+<!--
   CHANGELOG — v1.4, reassessed 22 August 2026 (matches internal Governance Assessment v1.4)
   - Otter.ai: updated wording — a federal court ruled Aug 13 2026 (previously pending).
   - Claude (for Work/Enterprise): added plain-English note on Anthropic's Aug 2026 safety
@@ -134,7 +146,7 @@
   <h1>AI Tool Guide: What You Can and Cannot Use</h1>
   <p class="cover-sub">A plain-English reference for all TRCAS staff and volunteers on which AI tools are approved for work, which require care, and which must never be used — and what information should never be shared with any AI tool.</p>
   <div class="cover-meta">
-    <span>22 August 2026 · Version 1.4</span>
+    <span>September 2026 · Version 1.5</span>
     <span>Issued by Archdiocesan IT Office (AITO)</span>
     <span>For all TRCAS staff, clergy &amp; volunteers · All prices shown in USD</span>
   </div>
@@ -148,6 +160,7 @@
   <a href="#tools">Tool Guide</a>
   <a href="#using">Using AI Safely</a>
   <a href="#questions">Questions</a>
+  <a href="#definitions">Key Terms</a>
 </nav>
 
 <div class="container">
@@ -240,8 +253,18 @@
         <td>Passwords, API keys, system login details, security codes</td>
         <td>Never enter any credentials into any AI tool — approved or otherwise.</td>
       </tr>
+      <tr>
+        <td>Crisis &amp; Conflict Matters</td>
+        <td>Safeguarding allegations, legal disputes, staff grievances, sensitive community conflicts</td>
+        <td>AI must not be used to draft responses to these matters. They require human judgement and appropriate professional or legal advice.</td>
+      </tr>
     </tbody>
   </table>
+
+  <div class="alert amber" style="margin-top:18px;">
+    <strong>A Note on AI-Generated Imagery</strong>
+    AI-generated images for communications or promotions must be clearly artistic in nature. They must not depict real, identifiable people or events as if photographic, and must never be used to impersonate any clergy, staff member, or other real person. This applies across all approved image generation tools.
+  </div>
 
   <div class="alert amber" style="margin-top:18px;">
     <strong>A Note on Meeting AI Tools</strong>
@@ -437,6 +460,26 @@
         </ul>
       </div>
       <div class="tool-card-footer"><span class="badge approved">Approved</span></div>
+    </div>
+
+    <div class="tool-card" data-verdict="conditional" data-cat="meeting">
+      <div class="tool-card-header">
+        <div class="tool-name">Plaud Note Pro (Hardware AI Recorder)</div>
+        <div class="tool-cat">Plaud Inc. · Device: ~US$189 one-off (verify SGD price locally) · Subscription: Starter free (300 min/month) · Pro US$99.99/year · Unlimited US$239.99/year</div>
+      </div>
+      <div class="tool-card-body">
+        <p>A credit-card-sized hardware AI voice recorder that transcribes and summarises meetings. Unlike software meeting tools, Plaud is a physical device — all AI processing happens through its cloud platform, not on your work computer. No training on user content by default; Singapore data centre available.</p>
+        <ul style="margin-top:8px;">
+          <li>✅ Meeting transcription and summaries for general work meetings</li>
+          <li>⚠️ You must verbally tell everyone in the room that you are recording — the device has no visible recording indicator light that others can see</li>
+          <li>⚠️ Use a Commercial account (not the free Starter plan) — check with AITO before purchase</li>
+          <li>⚠️ Cloud Sync must be understood before use — if enabled, recordings are stored in Plaud's cloud; if disabled, audio is deleted from cloud after syncing to your phone</li>
+          <li>⚠️ If you are considering using Plaud, contact AITO first — specific account and settings conditions apply</li>
+          <li>❌ Never use for pastoral counselling, HR meetings, safeguarding discussions, or donor financial conversations</li>
+          <li>❌ Do not use the free Starter plan for any Archdiocesan work — it has no enterprise data protections</li>
+        </ul>
+      </div>
+      <div class="tool-card-footer"><span class="badge conditional">Conditional</span></div>
     </div>
 
     <div class="tool-card" data-verdict="prohibited" data-cat="meeting">
@@ -886,6 +929,26 @@
       <div class="tool-card-footer"><span class="badge conditional">Conditional</span></div>
     </div>
 
+    <div class="tool-card" data-verdict="approved" data-cat="creative">
+      <div class="tool-card-header">
+        <div class="tool-name">DaVinci Resolve / DaVinci Resolve Studio</div>
+        <div class="tool-cat">Blackmagic Design · DaVinci Resolve: Free · DaVinci Resolve Studio: ~US$295 one-off licence (verify SGD price locally) — no subscription required</div>
+      </div>
+      <div class="tool-card-body">
+        <p>Professional video editing, colour grading, audio post-production, and visual effects software with extensive built-in AI features (Magic Mask, Voice Isolation, AI IntelliScript, AI Animated Subtitles, and more). All AI processing runs locally on your device using the DaVinci Neural Engine — your video content never leaves your computer for AI processing. This is fundamentally different from cloud AI tools: there is no data sent to an external AI service.</p>
+        <ul style="margin-top:8px;">
+          <li>✅ Video editing and production for parish events, catechetical content, and communications</li>
+          <li>✅ AI features such as Magic Mask, Voice Isolation, and Smart Reframe — all processed locally on your device</li>
+          <li>✅ Free version covers most use cases; Studio version adds full AI Neural Engine and noise reduction</li>
+          <li>⚠️ Install only on AITO-approved devices — contact AITO before purchasing or installing</li>
+          <li>⚠️ Blackmagic Cloud collaboration features (optional, separate) have not been separately assessed — do not use Cloud features without checking with AITO first</li>
+          <li>⚠️ Verify SGD pricing locally before purchase — do not assume conversion from US pricing</li>
+          <li>❌ Standard content rules apply — do not edit or produce video content that would breach TRCAS's data protection or pastoral confidentiality policies</li>
+        </ul>
+      </div>
+      <div class="tool-card-footer"><span class="badge approved">Approved</span></div>
+    </div>
+
   </div>
 
   <!-- ── CODING AI ── -->
@@ -942,7 +1005,14 @@
     <li><p><strong>When in doubt, leave it out.</strong> If you are unsure whether a piece of information is safe to enter into an AI tool — do not enter it. Contact AITO for guidance.</p></li>
     <li><p><strong>Do not share AI outputs containing personal data.</strong> If an AI tool generates content that includes personal details about real people (names, contact details, health information), do not share that output broadly or store it in unsecured locations.</p></li>
     <li><p><strong>Report unexpected behaviour.</strong> If an AI tool produces output that seems to have accessed information it shouldn't have, or if you accidentally enter sensitive data into a tool, inform AITO immediately. Early reporting limits harm.</p></li>
+    <li><p><strong>Keep agentic features off.</strong> Do not enable connector, agent, or auto-join "notetaker" features in any AI tool, and do not connect AI tools to each other or to Archdiocesan accounts or systems, without explicit AITO approval. When in doubt, leave these features disabled.</p></li>
+    <li><p><strong>Only use AITO-approved tools to record or transcribe meetings.</strong> Do not use unapproved transcription apps or recording tools — including apps that save audio or transcripts to personal device storage or a personal cloud account — for any Archdiocesan meeting. If you use a hardware recording device (such as a dedicated AI recorder), check with AITO first before using it for any work meeting — specific conditions apply. Recordings and transcripts must be held only in approved Archdiocesan systems with appropriate access controls, and deleted when no longer needed. Use Zoom AI Companion or Fathom for meeting transcription unless AITO has approved an alternative.</p></li>
   </ol>
+
+  <div class="alert red" style="margin-top:24px;">
+    <strong>AI-Enabled Fraud and Voice-Cloning Scams</strong>
+    Be alert to AI-driven phishing and voice-cloning scams. Criminals can now generate convincing audio or video impersonating clergy, leadership, or colleagues to request urgent fund transfers or the release of sensitive information. If you receive any unexpected or urgent request to transfer money or share sensitive data — even if it appears to come from a known person — independently verify it through a separate trusted channel (e.g. call back on a known number) before acting.
+  </div>
 
   <div class="alert green" style="margin-top:24px;">
     <strong>Remember — AI Is a Tool, Not a Replacement for Judgement</strong>
@@ -984,6 +1054,48 @@
     <p style="margin-top:10px;"><strong>I accidentally pasted sensitive data into an AI tool. What should I do?</strong><br>Contact AITO immediately. Do not wait. Delete the conversation if you can. Early notification allows AITO to assess the situation and determine whether there is a formal reporting obligation to Singapore's data protection authority (PDPC). There is no penalty for honest, prompt disclosure.</p>
     <p style="margin-top:10px;"><strong>I have been using a prohibited tool — what now?</strong><br>Stop using it and refer to the guidance in Section 4 above. Report to AITO confidentially. Prompt, honest disclosure is always the right course of action and will be treated constructively.</p>
   </div>
+</div>
+
+<!-- ══ DEFINITIONS ══ -->
+<div class="section" id="definitions">
+  <div class="section-label">Section 6</div>
+  <div class="section-title">Key Terms</div>
+  <p class="section-desc">Plain-English definitions of technical terms used in this guide and in related AITO documents.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Term</th>
+        <th>What It Means in Plain English</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Agent-to-Agent</td>
+        <td>Arrangements where one AI system instructs or acts on another AI system without a human directing each step. Not permitted at TRCAS without exceptional approval from AITO and the DPO.</td>
+      </tr>
+      <tr>
+        <td>Agentic AI</td>
+        <td>AI that can plan and carry out multi-step tasks on its own, with limited human supervision — for example, reading your emails, creating a document, and sending a reply, all without you clicking each step. Copilot Cowork and Claude Cowork are examples. Extra caution required — always check with AITO before enabling.</td>
+      </tr>
+      <tr>
+        <td>Agentic Tool Use / MCP</td>
+        <td>Configurations that give an AI tool the ability to connect to and act within external accounts, databases, or systems — for example, via the Model Context Protocol. Also includes "notetaker" bots that auto-join meetings and take actions on your behalf. Not permitted at TRCAS without explicit AITO approval.</td>
+      </tr>
+      <tr>
+        <td>Approved (Enterprise) AI Tool</td>
+        <td>A tool that AITO has reviewed and authorised under an organisational account or agreement that provides appropriate security, confidentiality, and data protection terms — including a commitment not to train on our data. Only these tools may be used for Archdiocesan work.</td>
+      </tr>
+      <tr>
+        <td>LLM Assistant</td>
+        <td>A Large Language Model assistant — a general-purpose AI tool you type questions or instructions into and it generates text in response. Examples: Claude, ChatGPT, Gemini, Copilot.</td>
+      </tr>
+      <tr>
+        <td>Public AI Tool</td>
+        <td>A consumer or free AI service not covered by a TRCAS organisational agreement — where your inputs may be stored or used to train the provider's AI models. Examples: ChatGPT Free/Plus, Claude Free/Pro, Gemini personal app. Must not be used for any Archdiocesan work content.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 </div><!-- /container -->

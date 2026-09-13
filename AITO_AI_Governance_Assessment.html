@@ -1,4 +1,19 @@
 <!--
+  CHANGELOG — v1.5, updated September 2026
+  - Section 1: Updated regulatory basis to include PDPC Advisory Guidelines on AI (Mar 2024)
+    and IMDA Model AI Governance Framework for Agentic AI (Jan/May 2026).
+  - Section 1: Added formal AI Isolation Principle governance note.
+  - Section 1: Added DPIA requirement as a mandatory gate before AI tool use involving personal data.
+  - Section 1: Added Facial Recognition / CCTV AI governance note.
+  - Section 2: Added Plaud Note Pro (Conditional) to Meeting AI category.
+  - Section 2: Added DaVinci Resolve / Resolve Studio (Approved) to Creative AI category.
+  - Section 3: Added Plaud Note Pro and DaVinci Resolve verdict cards.
+  - Section 6 (Sources): Added Plaud and DaVinci Resolve source cards.
+  - Added Definitions section (new Section 6 → now Section 7 after sources renumber): LLM, Agentic AI,
+    Agent-to-agent, MCP, Public AI tool, Approved AI tool, DPIA, Personal Data, ZDR.
+  - Cover tool count updated: 64 → 66.
+-->
+<!--
   CHANGELOG — v1.4, reassessed 22 August 2026 (Mode B periodic reassessment, TRCAS AITO)
   - Otter.ai: CORRECTION — the Aug 13 2026 motion-to-dismiss ruling had already been issued
     when v1.3 was published; v1.3 incorrectly said "still pending." Court denied dismissal
@@ -426,9 +441,9 @@
   <h1>AI Tool Governance & Privacy Assessment</h1>
   <p class="cover-sub">Evaluation criteria, tool inventory, and approval status for AI chatbots, integrated AI tools, and SaaS platforms — assessed against TRCAS data protection, PDPA, and organisational governance requirements.</p>
   <div class="cover-meta">
-    <span>22 August 2026 · Version 1.4</span>
+    <span>September 2026 · Version 1.5</span>
     <span>Confidential — Internal Use Only</span>
-    <span>Covers 64+ tools across 10 categories</span>
+    <span>Covers 66+ tools across 10 categories</span>
     <span>Based on publicly available vendor policies as of 22 August 2026 · All prices in USD</span>
   </div>
 </div>
@@ -440,7 +455,7 @@
   <a href="#assessment">Full Assessment Table</a>
   <a href="#verdicts">Tool Verdicts</a>
   <a href="#prohibited">Prohibited Tools</a>
-  <a href="#notes">Important Notes</a><a href="#sources">Sources</a>
+  <a href="#notes">Important Notes</a><a href="#definitions">Key Terms</a><a href="#sources">Sources</a>
 </nav>
 
 <div class="container">
@@ -449,7 +464,7 @@
 <div class="section" id="criteria">
   <div class="section-label">Section 1</div>
   <div class="section-title">Evaluation Criteria</div>
-  <p class="section-desc">All AI tools and SaaS platforms are assessed against the following criteria, grouped by category. These criteria reflect TRCAS's PDPA obligations, the federated parish governance model, the sensitivity of Archdiocesan data, and the principles of Magnifica Humanitas on AI ethics.</p>
+  <p class="section-desc">All AI tools and SaaS platforms are assessed against the following criteria, grouped by category. These criteria reflect TRCAS's PDPA obligations, the federated parish governance model, the sensitivity of Archdiocesan data, and the principles of Magnifica Humanitas on AI ethics. Assessments are also grounded in the PDPC Advisory Guidelines on the Use of Personal Data in AI Recommendation and Decision Systems (March 2024), the IMDA Model AI Governance Framework for Generative AI (2024), and the IMDA Model AI Governance Framework for Agentic AI (launched January 2026; updated May 2026).</p>
 
   <div class="criteria-grid">
 
@@ -569,6 +584,21 @@
   <div class="info-box" style="margin-top:24px;">
     <strong>How to Read the Assessment</strong>
     Each tool is rated APPROVED, CONDITIONAL (permitted with specific controls), or PROHIBITED for use with Archdiocesan data. CONDITIONAL tools may be used for low-sensitivity tasks only unless the specific conditions noted are met. No tool — regardless of approval status — should ever receive sacramental records, pastoral counselling notes, donor financial data, or youth/minor personal data without explicit AITO sign-off.
+  </div>
+
+  <div class="info-box" style="margin-top:16px;">
+    <strong>Governance Principle: AI System Isolation</strong>
+    TRCAS deliberately limits AI use to a narrow, well-understood set of isolated systems — stand-alone LLM assistants and approved meeting tools that operate within defined boundaries and under human control. AI tools must not be connected to one another, or given autonomous access to Archdiocesan systems, accounts, or data. Doing so widens the attack surface, weakens human oversight, and increases risk to personal data. This isolation principle is AITO's baseline position for all tool approvals.
+  </div>
+
+  <div class="info-box" style="margin-top:16px;">
+    <strong>Governance Requirement: DPIA Before AI Use Involving Personal Data</strong>
+    Before any AI tool — including an already-approved tool — is used for tasks involving personal data of parishioners, staff, donors, students, or volunteers, a Data Protection Impact Assessment (DPIA) must be completed. Contact the DPO to initiate this process. Approval to use a tool for general tasks does not automatically extend to personal data use. The DPO maintains records of completed DPIAs and approved use cases.
+  </div>
+
+  <div class="info-box" style="margin-top:16px;">
+    <strong>Governance Note: Facial Recognition and AI Analytics on Security Systems</strong>
+    Any use of facial recognition or AI-powered analytics on CCTV cameras or other premises security systems must comply with the PDPA and TRCAS's CCTV Guidelines, including appropriate notification to persons affected. Such use must be approved by AITO and the DPO in advance. This applies regardless of whether the AI analytics capability is built into an otherwise-approved tool.
   </div>
 </div>
 
@@ -1515,6 +1545,21 @@
         <td><span class="badge approved">Approved</span></td>
       </tr>
 
+      <tr data-cat="meeting" data-verdict="conditional">
+        <td><div class="tool-name">Plaud Note Pro (Hardware AI Recorder)</div><div class="tool-sub">Plaud Inc. · Device ~US$189 one-off · Starter free (300 min/month) · Pro US$99.99/yr · Unlimited US$239.99/yr · ⚠️ Verify SGD price locally</div></td>
+        <td>Meeting AI (Hardware)</td>
+        <td><span class="dot g"></span>No training on user content by default — explicit opt-in required. All AI subprocessors (OpenAI, Google, Microsoft) contracted under ZDR and no-training DPAs. Contractually enforced per Plaud's AI Data Usage Transparency Policy.</td>
+        <td><span class="dot a"></span>Audio stored locally on device. Cloud Sync off by default — if disabled, audio deleted from cloud after device sync. If Cloud Sync enabled, data retained for account duration. User can delete via account termination. Verify specific retention periods with Plaud.</td>
+        <td><span class="dot a"></span>Singapore AWS data centre confirmed available. LLM processing (transcription/summarisation) routes through US-hosted LLM endpoints (OpenAI, Google, Microsoft) for Singapore users regardless of data storage location — US CLOUD Act applies to LLM processing pathway. Verify acceptability with DPO before use involving personal data.</td>
+        <td><span class="dot g"></span>No routine Plaud personnel access to content. Access only for user-requested support, system error diagnosis, or legal compliance. Role-based access controls and logging in place.</td>
+        <td><span class="dot g"></span>SOC 2 Type II · ISO/IEC 27001 · ISO 27701 · GDPR · HIPAA · EN 18031. Certified by Sensiba. DPA auto-incorporated into Commercial Terms (click-through, not negotiated). DPA with SCCs available. No AITO gate at signing stage — governance relies on Commercial account conditions.</td>
+        <td><span class="dot a"></span>DPA click-through only — not a negotiated enterprise agreement. No SSO or SCIM confirmed from primary sources — verify with Plaud before org-wide deployment. No org-wide admin console confirmed.</td>
+        <td><span class="dot a"></span>Audit logs not confirmed from primary sources — verify with Plaud.</td>
+        <td><span class="dot g"></span>SOC 2 Type II · ISO 27001 · ISO 27701 · HIPAA · EN 18031 · GDPR. Certification body: Sensiba.</td>
+        <td><span class="dot a"></span>Hardware-specific risk: the device has no visible recording indicator light for others in the room — only the user's AMOLED display shows recording status. Per TRCAS hardware addendum (§3 of Governance Reference), mandatory verbal disclosure to all meeting participants is required at the start of every meeting, independent of data protections. Conditions: Commercial account required (not free Starter); Cloud Sync settings must be reviewed with DPO before use involving personal data; LLM processing routes through US-hosted endpoints — verify PDPA overseas transfer acceptability; never use for pastoral counselling, HR, safeguarding, or donor financial meetings. Assessed September 2026 — re-verify at next scheduled review.</td>
+        <td><span class="badge conditional">Conditional</span></td>
+      </tr>
+
       <!-- ─── CREATIVE & DESIGN AI ─── -->
       <tr class="cat-row"><td colspan="12">CREATIVE &amp; DESIGN AI TOOLS</td></tr>
 
@@ -1606,6 +1651,21 @@
         <td><span class="dot g"></span>Inherits Azure/Microsoft Foundry compliance certifications.</td>
         <td><span class="dot a"></span>This is the only acceptable access path for FLUX.2 — via Microsoft Foundry under Microsoft's own Product Terms and DPA, not Black Forest Labs' direct consumer API or Playground. Self-hosted open-weight variants (FLUX.2 [dev]/[klein]) offer full data sovereignty but require AITO-managed infrastructure — treat as a separate infra decision if proposed.</td>
         <td><span class="badge conditional">Conditional</span></td>
+      </tr>
+
+      <tr data-cat="creative2" data-verdict="approved">
+        <td><div class="tool-name">DaVinci Resolve / DaVinci Resolve Studio</div><div class="tool-sub">Blackmagic Design Pty Ltd · DaVinci Resolve: Free · Resolve Studio: ~US$295 one-off licence · ⚠️ Verify SGD price locally</div></td>
+        <td>Creative AI (Video Production)</td>
+        <td><span class="dot g"></span>All AI features (Magic Mask, Voice Isolation, AI IntelliScript, AI Animated Subtitles, AI Multicam SmartSwitch, AI Audio Assistant, Speed Warp, SuperScale, etc.) run entirely on-device via the DaVinci Neural Engine — no video, audio or project content is transmitted to any external AI service for processing. Blackmagic Design's privacy policy does not reference training AI models on user content. Training data practices for model development are not explicitly disclosed by Blackmagic Design — flag as verify. No evidence of user content collection from AI features.</td>
+        <td><span class="dot g"></span>No cloud retention for AI features — all processing is local. Blackmagic Cloud (optional collaboration feature, separately assessed if used) syncs project media to cloud; virtual clips appear in media pool and sync locally only when used in a project. Registration data retained up to 6 years per privacy policy.</td>
+        <td><span class="dot g"></span>All AI processing is local, on-device — no data residency question for AI features. Blackmagic Cloud (if used) stores data in Australia, US, UK, Ireland, Germany, Japan, and Singapore. Singapore available for Cloud storage. No PDPA overseas transfer concern for local AI features.</td>
+        <td><span class="dot g"></span>No vendor personnel access to video content for AI features — all processing is local. Blackmagic personnel may access registration data per standard privacy policy provisions. Blackmagic Cloud content: Blackmagic acts as data processor for customer content.</td>
+        <td><span class="dot a"></span>No SOC 2 or ISO 27001 found for Blackmagic Design as a software vendor — not applicable in the same way as cloud SaaS tools. Privacy policy last updated 1 March 2026. No DPA in the traditional sense — installed software, not a cloud service. No AITO gate at licensing stage. No breach history found. GDPR and APAC data protection compliance stated in privacy policy. Singapore-specific privacy page available.</td>
+        <td><span class="dot a"></span>No SSO, SCIM, or org admin console — installed software, not a SaaS platform. Governance relies on AITO endpoint management, software asset management, and standard content policies. No enterprise deployment path for centralised management.</td>
+        <td><span class="dot a"></span>No vendor-side audit logs for AI feature usage — all local. AITO endpoint management provides local oversight.</td>
+        <td><span class="dot a"></span>No SOC 2 or ISO 27001 (installed software, not SaaS). Long-established professional broadcast and film tool with no significant breach or security incident history. Blackmagic Design Pty Ltd: Australian company, incorporated ACN 098 098 287.</td>
+        <td><span class="dot g"></span>Fundamentally different risk profile from cloud AI tools: AI features are on-device only, no cloud data transmission for AI processing. No training concern for user content. Governance controls rely on AITO endpoint management rather than vendor admin controls. Blackmagic Cloud collaboration features are optional and have not been separately assessed — do not enable without AITO review. Content policies (PDPA, pastoral confidentiality) apply to video content edited regardless of tool. No nonprofit pricing found — verify with local resellers. Verify SGD pricing before purchase. Assessed September 2026 — re-verify at next scheduled review.</td>
+        <td><span class="badge approved">Approved</span></td>
       </tr>
 
       <!-- ─── WORKFLOW & AUTOMATION ─── -->
@@ -1850,6 +1910,28 @@
     <div class="verdict-card">
       <div class="verdict-header">
         <div class="verdict-header-left">
+          <h3>DaVinci Resolve / DaVinci Resolve Studio</h3>
+          <p>Creative AI (Video Production) · Blackmagic Design · Free / ~US$295 one-off</p>
+        </div>
+        <span class="badge approved">Approved</span>
+      </div>
+      <div class="verdict-body">
+        <p>Professional video editing and production software with extensive built-in AI features. All AI processing runs entirely on-device via the DaVinci Neural Engine — no video, audio, or project content is transmitted to any external AI service. This is fundamentally different from cloud AI tools: there is no data training concern for user content and no cloud data residency question for AI features. Blackmagic Cloud collaboration features are optional and separately assessed — do not enable without AITO review.</p>
+        <div class="conditions green">
+          <strong>Conditions Before Use</strong>
+          <ul>
+            <li>Install only on AITO-approved devices — contact AITO before purchasing or installing</li>
+            <li>Do not enable Blackmagic Cloud features without a separate AITO assessment</li>
+            <li>Standard TRCAS content policies apply to video content edited — PDPA and pastoral confidentiality obligations do not change because the tool is approved</li>
+            <li>Verify SGD pricing locally before purchase — do not assume conversion from US pricing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="verdict-card">
+      <div class="verdict-header">
+        <div class="verdict-header-left">
           <h3>FLUX.2 Pro (via Microsoft Foundry)</h3>
           <p>Creative AI (Image Gen) · Black Forest Labs, delivered via Azure enterprise deployment</p>
         </div>
@@ -1863,6 +1945,31 @@
             <li>Access only via Microsoft Foundry / Azure AI Foundry — never the direct bfl.ai API, Playground, or third-party resellers (Fal.ai, Replicate, Together AI)</li>
             <li>Verify Azure region selection supports Singapore or an approved data residency option for this specific model</li>
             <li>Non-sensitive creative and marketing content only</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="verdict-card">
+      <div class="verdict-header">
+        <div class="verdict-header-left">
+          <h3>Plaud Note Pro (Hardware AI Recorder)</h3>
+          <p>Meeting AI (Hardware) · Plaud Inc. · ~US$189 device + subscription</p>
+        </div>
+        <span class="badge conditional">Conditional</span>
+      </div>
+      <div class="verdict-body">
+        <p>Hardware AI voice recorder with strong data protections — no training on user content, Singapore data centre available, SOC 2 Type II and ISO 27001 certified. However, unlike software meeting tools, Plaud is a physical device that requires specific governance treatment. The device's AMOLED display shows recording status only to the user — others in the room cannot see a recording indicator, making verbal disclosure mandatory. LLM processing (transcription and summarisation) routes through US-hosted endpoints regardless of Singapore data storage, creating a CLOUD Act exposure on the processing pathway.</p>
+        <div class="conditions amber">
+          <strong>Conditions Before Use</strong>
+          <ul>
+            <li>Commercial account required (not the free Starter plan) — contact AITO before purchase</li>
+            <li>Verbally inform all meeting participants that the device is recording before every meeting — no exceptions</li>
+            <li>Review Cloud Sync settings with DPO before use involving personal data — understand retention implications of Cloud Sync on vs off</li>
+            <li>Verify PDPA overseas transfer acceptability with DPO before use involving personal data — LLM processing routes through US-hosted endpoints</li>
+            <li>Never use for pastoral counselling, HR meetings, safeguarding discussions, or donor financial conversations</li>
+            <li>Verify SGD pricing locally before purchase</li>
+            <li>SSO, SCIM, and audit log availability not confirmed — verify with Plaud before org-wide deployment</li>
           </ul>
         </div>
       </div>
@@ -2562,10 +2669,74 @@
 
 </div><!-- /container -->
 
+<!-- DEFINITIONS SECTION -->
+<div class="container">
+<div class="section" id="definitions">
+  <div class="section-label">Section 6</div>
+  <div class="section-title">Key Definitions</div>
+  <p class="section-desc">Formal definitions of terms used throughout this assessment and in related AITO governance documents.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width:22%">Term</th>
+        <th>Definition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Agent-to-Agent</td>
+        <td>Arrangements in which AI systems act on, or instruct, other AI systems without direct human direction. Not permitted at TRCAS without prior approval from the DPO, IT function, and relevant approving authority.</td>
+      </tr>
+      <tr>
+        <td>Agentic AI</td>
+        <td>AI that can plan and carry out multi-step tasks or take actions with limited human supervision, including connecting to other tools, accounts or systems. Requires exceptional approval at TRCAS — see Governance Requirement note in Section 1.</td>
+      </tr>
+      <tr>
+        <td>Agentic Tool Use / MCP</td>
+        <td>Configurations that give an AI the ability to use external tools or act directly within accounts, databases or systems — for example, via the Model Context Protocol — and "notetaker" or agent features that auto-join meetings or take actions on a user's behalf. Not permitted in standard use at TRCAS.</td>
+      </tr>
+      <tr>
+        <td>Approved (Enterprise) AI Tool</td>
+        <td>A tool reviewed and authorised by AITO under an organisational account or agreement that provides appropriate security, confidentiality and data-protection terms, including a contractual commitment not to train on TRCAS data.</td>
+      </tr>
+      <tr>
+        <td>Artificial Intelligence (AI)</td>
+        <td>Computer systems that perform tasks normally requiring human intelligence, including generating text, images, audio or video, making recommendations, classifying information, or taking actions.</td>
+      </tr>
+      <tr>
+        <td>DPIA</td>
+        <td>Data Protection Impact Assessment — a structured risk assessment that must be completed before any approved AI tool is used for tasks involving personal data. Owned by the DPO. See Governance Requirement note in Section 1.</td>
+      </tr>
+      <tr>
+        <td>Generative AI</td>
+        <td>AI that produces new content (text, images, audio, video, code) in response to prompts — for example, general-purpose chat assistants and image generators.</td>
+      </tr>
+      <tr>
+        <td>LLM Assistant</td>
+        <td>A Large Language Model assistant — a general-purpose generative AI tool used in a stand-alone way to draft, summarise, analyse or answer questions (e.g. Copilot, ChatGPT, Gemini, Claude), whether accessed through its own interface or through an approved API.</td>
+      </tr>
+      <tr>
+        <td>Personal Data</td>
+        <td>As defined in the Personal Data Protection Act 2012 (PDPA) — data, whether true or not, about an individual who can be identified from that data or from that data combined with other information the organisation has or is likely to have access to.</td>
+      </tr>
+      <tr>
+        <td>Public AI Tool</td>
+        <td>A consumer or general-purpose AI service not governed by a TRCAS organisational agreement, where inputs may be retained or used to train the provider's models. Must not be used for any Archdiocesan work content.</td>
+      </tr>
+      <tr>
+        <td>ZDR (Zero Data Retention)</td>
+        <td>A contractual option available from some enterprise AI providers whereby inputs and outputs are not logged or retained by the provider after processing. Where available and applicable, AITO prefers ZDR-enabled configurations for sensitive workflows.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
 <!-- SOURCES SECTION -->
 <div class="container">
 <div class="section" id="sources">
-  <div class="section-label">Section 6</div>
+  <div class="section-label">Section 7</div>
   <div class="section-title">Sources &amp; References</div>
   <p class="section-desc">Sources are divided into two clear tiers. <strong>Primary sources are direct links to the vendor's own official documentation</strong> — these are what carry contractual and legal weight. Supporting sources are independent researchers, journalists, and legal analysts used only to document incidents or clarify implications that vendors would not self-report. For any procurement or policy decision, rely on primary sources and verify they are current.</p>
 
@@ -2661,6 +2832,24 @@
           <li><a href="https://bfl.ai/legal/developer-terms-of-service" target="_blank" rel="noopener">FLUX Developer Terms of Service (training licence grant)<span class="src-dom">bfl.ai</span></a></li>
           <li><a href="https://bfl.ai/enterprise" target="_blank" rel="noopener">Black Forest Labs Enterprise Solutions<span class="src-dom">bfl.ai</span></a></li>
           <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-2-visual-intelligence-for-enterprise-creative-now-on-micr/4477561" target="_blank" rel="noopener">FLUX.2 on Microsoft Foundry — Official Announcement<span class="src-dom">techcommunity.microsoft.com</span></a></li>
+        </ul>
+      </div>
+
+      <div class="src-card2">
+        <h4>Plaud Note Pro</h4>
+        <ul>
+          <li><a href="https://plaud.ai/pages/trust" target="_blank" rel="noopener">Plaud Trust Center — Data Residency, Certifications, DPA, AI Training Policy<span class="src-dom">plaud.ai/pages/trust</span></a></li>
+          <li><a href="https://support.plaud.ai/hc/en-us/articles/57744162858009-How-your-data-is-used-in-AI-processing" target="_blank" rel="noopener">How Your Data is Used in AI Processing — Plaud Support (AI subprocessor ZDR table)<span class="src-dom">support.plaud.ai</span></a></li>
+          <li><a href="https://plaud.ai/pages/privacy-policy" target="_blank" rel="noopener">Plaud Privacy Policy (updated June 2026)<span class="src-dom">plaud.ai/pages/privacy-policy</span></a></li>
+        </ul>
+      </div>
+
+      <div class="src-card2">
+        <h4>DaVinci Resolve / Blackmagic Design</h4>
+        <ul>
+          <li><a href="https://blackmagicdesign.com/privacy" target="_blank" rel="noopener">Blackmagic Design Privacy Policy (updated 1 March 2026)<span class="src-dom">blackmagicdesign.com/privacy</span></a></li>
+          <li><a href="https://www.blackmagicdesign.com/sg/privacy" target="_blank" rel="noopener">Blackmagic Design Privacy Policy — Singapore<span class="src-dom">blackmagicdesign.com/sg/privacy</span></a></li>
+          <li><a href="https://secure.businesswire.com/news/home/20250404998243/en/Blackmagic-Design-Announces-DaVinci-Resolve-20" target="_blank" rel="noopener">Blackmagic Design Announces DaVinci Resolve 20 — Official Press Release (AI features list)<span class="src-dom">businesswire.com</span></a></li>
         </ul>
       </div>
 
